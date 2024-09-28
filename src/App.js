@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './app.css';
+import Items from './components/Items/Items';
+import TaskPanel from './components/TaskPanel/TaskPanel';
+import Filtration from './components/Filtration/Filtration';
+
+class App extends React.Component {
+  state = { shouldUpdate: false, isAll: false };
+
+  changeMode = () => {
+    this.setState({ isAll: !this.state.isAll });
+  };
+
+  changeState = (value) => {
+    this.setState({ shouldUpdate: value });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <TaskPanel shouldUpdate={this.state.shouldUpdate} update={this.changeState} />
+        <Filtration mode={this.state.isAll} changeMode={this.changeMode} />
+        <Items shouldUpdate={this.state.shouldUpdate} update={this.changeState} mode={this.state.isAll} />
+      </div>
+    );
+  }
 }
 
 export default App;

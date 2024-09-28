@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
+  max-width: 900px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  background-color: #00000000;
+  margin: 3px 0;
+  transition: 0.1s;
+}
+
+.check {
+  width: 22px;
+  height: 22px;
+  outline: 0;
+}
+
+.description__block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  max-width: 720px;
+  width: 100%;
+  margin-left: 15px;
+}
+
+.name {
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.description {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #000000aa;
+  margin-top: 20px;
+}
+
+.date {
+  min-width: 125px;
+}
+
+.delete {
+  color: white;
+  background-color: rgb(177, 0, 0);
+  font-size: 20px;
+  height: 100%;
+  width: 140px;
+  position: absolute;
+  border-radius: 3px;
+  top: 0;
+  right: -150px;
+  transition: 0.2s;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.container:hover .delete {
+  right: 0;
+}
+
+.container.active {
+  background-color: #00000022;
+}

@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  min-width: 60px;
+  height: 30px;
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.add__button:hover {
+  background-color: rgba(210, 210, 210);
+}
+
+.top__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
