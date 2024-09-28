@@ -8,6 +8,7 @@ class Filtration extends React.Component {
         <label htmlFor="filter" className={styles.label}>
           Only uncompleted
         </label>
+
         <input type="checkbox" className={styles.input} id="filter" checked={this.props.mode} />
       </div>
     );

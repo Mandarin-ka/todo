@@ -1,7 +1,7 @@
 import React from 'react';
-import Input from './../Input/Input';
-import TextArea from './../TextArea/TextArea';
-import { getItems, setItem } from '../../utils/localStorage';
+import Input from '../Input/Input';
+import TextArea from '../TextArea/TextArea';
+import { setItem } from '../../utils/localStorage';
 
 import styles from './TaskPanel.module.css';
 import { getTime } from '../../utils/getTime';
